@@ -28,12 +28,15 @@
         statProcessLabel: "Procesos",
         statPresenceLabel: "Presencia",
         statSectorsLabel: "Sectores",
+        statSectorsValue: "3 claves",
         summaryExpLabel: "Experiencia",
+        summaryExpValue: "12 años",
         summaryExpText:
           "Apoyando decisiones críticas de talento en compañías medianas con ambición de crecimiento.",
         summaryCoverLabel: "Cobertura",
         summaryCoverText: "Operación coordinada desde Valencia y Miami para procesos con alcance regional.",
         summarySectorsLabel: "Sectores clave",
+        summarySectorsValue: "Tecnología, retail y servicios financieros",
         summarySectorsText:
           "Soluciones alineadas con operaciones, atención al cliente y liderazgo en entornos exigentes.",
         servicesLabel: "Servicios",
@@ -172,11 +175,14 @@
         statProcessLabel: "Processes",
         statPresenceLabel: "Presence",
         statSectorsLabel: "Sectors",
+        statSectorsValue: "3 key sectors",
         summaryExpLabel: "Experience",
+        summaryExpValue: "12 years",
         summaryExpText: "Supporting critical talent decisions for ambitious mid-sized companies.",
         summaryCoverLabel: "Coverage",
         summaryCoverText: "Coordinated operation from Valencia and Miami for regional hiring processes.",
         summarySectorsLabel: "Key sectors",
+        summarySectorsValue: "Technology, retail, and financial services",
         summarySectorsText: "Solutions aligned with operations, customer support, and leadership in demanding environments.",
         servicesLabel: "Services",
         servicesTitle: "Talent solutions designed to scale with your company",
@@ -375,11 +381,14 @@
     setText("stat-process-label", locale.statProcessLabel);
     setText("stat-presence-label", locale.statPresenceLabel);
     setText("stat-sectors-label", locale.statSectorsLabel);
+    setText("stat-sectors-value", locale.statSectorsValue);
     setText("summary-exp-label", locale.summaryExpLabel);
+    setText("summary-exp-value", locale.summaryExpValue);
     setText("summary-exp-text", locale.summaryExpText);
     setText("summary-cover-label", locale.summaryCoverLabel);
     setText("summary-cover-text", locale.summaryCoverText);
     setText("summary-sectors-label", locale.summarySectorsLabel);
+    setText("summary-sectors-value", locale.summarySectorsValue);
     setText("summary-sectors-text", locale.summarySectorsText);
     setText("services-label", locale.servicesLabel);
     setText("services-title", locale.servicesTitle);

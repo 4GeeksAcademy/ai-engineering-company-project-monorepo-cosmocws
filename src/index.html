@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexova | Prueba manual de utilidades TypeScript</title>
+    <meta
+      name="description"
+      content="Página de apoyo para validar manualmente las utilidades TypeScript del hito de fundamentos de programación."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100">
+    <main class="mx-auto max-w-5xl px-6 py-12">
+      <h1 class="text-3xl font-bold tracking-tight">Nexova: Fundamentos TypeScript</h1>
+      <p class="mt-4 text-slate-300">
+        Esta pagina opcional incluye pruebas manuales con controles para filtrar, buscar, ordenar y generar reportes.
+      </p>
+
+      <section class="mt-8 rounded-2xl border border-slate-700 bg-slate-900 p-6">
+        <h2 class="text-xl font-semibold">Comandos sugeridos</h2>
+        <pre class="mt-4 overflow-x-auto rounded-xl bg-slate-950 p-4 text-sm text-emerald-300"><code>cd src
+npm run typecheck
+npm run quicktest
+
+# Servir esta página opcional localmente
+npx http-server . -p 3000 -a 0.0.0.0</code></pre>
+      </section>
+
+      <section class="mt-6 grid gap-6 lg:grid-cols-2">
+        <article class="rounded-2xl border border-slate-700 bg-slate-900 p-6">
+          <h2 class="text-xl font-semibold">Pruebas de operaciones</h2>
+          <p class="mt-2 text-sm text-slate-300">
+            Usa estos controles para ejecutar operaciones tipicas del hito y revisar el resultado en JSON.
+          </p>
+
+          <div class="mt-5 space-y-5">
+            <div>
+              <label for="skills-input" class="block text-sm font-medium text-slate-200">Habilidades (coma separadas)</label>
+              <input id="skills-input" type="text" value="TypeScript, React" class="mt-2 w-full rounded-xl border border-slate-600 bg-slate-950 px-3 py-2 text-sm text-slate-100" />
+              <button id="btn-filter-skills" type="button" class="mt-2 rounded-xl bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-cyan-400">Filtrar por habilidades</button>
+            </div>
+
+            <div>
+              <label for="availability-select" class="block text-sm font-medium text-slate-200">Disponibilidad (multiple)</label>
+              <select id="availability-select" multiple class="mt-2 w-full rounded-xl border border-slate-600 bg-slate-950 px-3 py-2 text-sm text-slate-100">
+                <option value="Immediate" selected>Immediate</option>
+                <option value="2 weeks" selected>2 weeks</option>
+                <option value="1 month">1 month</option>
+                <option value="Not available">Not available</option>
+              </select>
+              <button id="btn-filter-availability" type="button" class="mt-2 rounded-xl bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-cyan-400">Filtrar por disponibilidad</button>
+            </div>
+
+            <div class="grid gap-2 sm:grid-cols-2">
+              <button id="btn-sort-salary-asc" type="button" class="rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-300">Ordenar salario asc</button>
+              <button id="btn-sort-salary-desc" type="button" class="rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-300">Ordenar salario desc</button>
+            </div>
+
+            <div>
+              <label for="search-id" class="block text-sm font-medium text-slate-200">Buscar por ID</label>
+              <div class="mt-2 flex gap-2">
+                <input id="search-id" type="text" value="C-2024-0452" class="w-full rounded-xl border border-slate-600 bg-slate-950 px-3 py-2 text-sm text-slate-100" />
+                <button id="btn-search-id" type="button" class="rounded-xl bg-violet-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-violet-300">Buscar</button>
+              </div>
+            </div>
+
+            <div>
+              <label for="search-email" class="block text-sm font-medium text-slate-200">Buscar por email</label>
+              <div class="mt-2 flex gap-2">
+                <input id="search-email" type="text" value="MARIA.GONZALEZ@EMAIL.COM" class="w-full rounded-xl border border-slate-600 bg-slate-950 px-3 py-2 text-sm text-slate-100" />
+                <button id="btn-search-email" type="button" class="rounded-xl bg-violet-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-violet-300">Buscar</button>
+              </div>
+            </div>
+
+            <div>
+              <label for="binary-salary" class="block text-sm font-medium text-slate-200">Busqueda binaria por salario</label>
+              <div class="mt-2 flex gap-2">
+                <input id="binary-salary" type="number" value="4200" class="w-full rounded-xl border border-slate-600 bg-slate-950 px-3 py-2 text-sm text-slate-100" />
+                <button id="btn-binary-salary" type="button" class="rounded-xl bg-amber-300 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-amber-200">Buscar</button>
+              </div>
+            </div>
+
+            <div class="grid gap-2 sm:grid-cols-2">
+              <button id="btn-rank" type="button" class="rounded-xl bg-fuchsia-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-fuchsia-300">Rankear candidatos</button>
+              <button id="btn-report" type="button" class="rounded-xl bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-sky-300">Generar reporte agregado</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-700 bg-slate-900 p-6">
+          <h2 id="result-title" class="text-xl font-semibold">Resultado</h2>
+          <p class="mt-2 text-sm text-slate-300">Salida de la operacion seleccionada.</p>
+          <pre id="result-output" class="mt-4 max-h-[38rem] overflow-auto rounded-xl bg-slate-950 p-4 text-xs leading-6 text-emerald-300">Presiona un boton para ejecutar una prueba manual.</pre>
+        </article>
+      </section>
+
+      <section class="mt-6 rounded-2xl border border-slate-700 bg-slate-900 p-6">
+        <h2 class="text-xl font-semibold">Archivos implementados</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-6 text-slate-300">
+          <li>types/models.ts</li>
+          <li>utils/collections.ts</li>
+          <li>utils/search.ts</li>
+          <li>utils/transformations.ts</li>
+          <li>utils/validations.ts</li>
+          <li>quick-tests.ts</li>
+          <li>playground.js</li>
+        </ul>
+      </section>
+    </main>
+    <script src="playground.js"></script>
+  </body>
+</html>

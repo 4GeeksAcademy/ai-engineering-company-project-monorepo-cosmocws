@@ -1,0 +1,9 @@
+{
+  "name": "nexova-programming-foundations",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "typecheck": "npx --yes --package typescript tsc --noEmit -p tsconfig.json",
+    "quicktest": "npx --yes --package tsx tsx quick-tests.ts"
+  }
+}
